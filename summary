@@ -1,0 +1,22 @@
+I got the data from BetaNYC on crime in NYC through APIs. 
+It has weekly numbers for each precinct in NYC. For example, “Petit Larceny” week 7/24/2024 - 7/30/2024 34.
+I cleaned up the dates for some of the weeks.
+Then I zoom in into South and North Brooklyn and merge data into a data frame.
+
+First, I want to see if there is more crime in Summer than in Winter months in Brooklyn in 2023.
+
+Generally, it was true there was more crime in Summer than in Winter in 2023 except Rape and Murder. 
+I then checked if it's true for 2022. It was not. Some crimes happened more frequently in Summer, others in Winter. 
+Summer vs Winter 2022 crimes were inconsistent with Summer vs Winter 2023.
+
+Second, I decided to look into 4 types of what I called “theft”: Petit Larceny, Grand Larceny, Burglary, and Robbery. 
+Petit Larceny is the most frequent of these four in Brooklyn in 2022-2024 which makes sense because it's the least risky.
+I was surprised that Burglary and Robbery happened almost at the same rate. 
+Robbery is much riskier, has a bigger punishment, and involves interaction with a victim and a “threat of violence”. 
+Anything can happen. Burglary is less risky, does not require interaction with a victim, and has a smaller punishment than robbery. 
+Surprisingly, robbery and burglary happened almost at the same rate. Sometimes, burglary happens less often.
+
+Third, I created an interactive dashboard using Dash that allows a user to pick a type of crime and between 2022 and early 2024.
+
+I found out that NYC police has a website that shows all this data in an interactive dashboard 
+with more detailed data than mine except there is no filter for dates, only the most recent week.
