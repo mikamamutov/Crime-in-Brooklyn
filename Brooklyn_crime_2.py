@@ -223,7 +223,6 @@ df_brooklyn_summer_winter_all_2023_by_crime_with_total = pd.merge(df_brooklyn_su
 df_brooklyn_summer_winter_all_2022_by_crime_with_total = pd.merge(df_brooklyn_summer_all_2022_by_crime_with_total,df_brooklyn_winter_all_2022_by_crime_with_total, on="Crime")
 df_brooklyn_summer_winter_all_2022_2023_by_crime_with_total = pd.merge(df_brooklyn_summer_winter_all_2022_by_crime_with_total,df_brooklyn_summer_winter_all_2023_by_crime_with_total,on="Crime")
 
-# df_brooklyn_summer_winter_all_2022_2023_by_crime_with_total.to_csv("/Users/medermamutov/Desktop/df_brooklyn_summer_winter_all_2022_2023_by_crime_with_total.csv",index = False)
 df_brooklyn_summer_winter_all_2022_2023_by_crime_with_total_sorted = df_brooklyn_summer_winter_all_2022_2023_by_crime_with_total.sort_values(by="Current_total_x_x",ascending=False)
 df_brooklyn_summer_winter_all_2022_2023_by_crime_with_total_sorted = df_brooklyn_summer_winter_all_2022_2023_by_crime_with_total_sorted[df_brooklyn_summer_winter_all_2022_2023_by_crime_with_total_sorted["Crime"]!="Total"]
 df_brooklyn_summer_winter_all_2022_2023_by_crime_with_total_sorted = df_brooklyn_summer_winter_all_2022_2023_by_crime_with_total_sorted.rename(columns = {"Current_total_x_x":"Summer 2022", "Current_total_y_x":"Winter 2022","Current_total_x_y":"Summer 2023","Current_total_y_y":"Winter 2023"})
@@ -244,7 +243,6 @@ df_brooklyn_summer_winter_all_2022_2023_by_crime_with_total_sorted = df_brooklyn
 # plt.show()
 
 # Turn Dataframe Brooklyn into CSV file - main file with data
-# df_brooklyn.to_csv("/Users/medermamutov/Desktop/df_brooklyn.csv",index = False)
 
 # y values - Start DAta
 # x values - Burglary, Petit, Grand, Robbery
@@ -258,9 +256,6 @@ df_brooklyn_theft_pivot = df_brooklyn_theft.pivot(index="Start_date", columns="C
 # df_brooklyn_theft_pivot.plot(kind = "line",figsize=(10,6))
 # plt.grid(True)
 # plt.show()
-
-# df_brooklyn_theft.to_csv("/Users/medermamutov/Desktop/df_brooklyn_theft.csv",index = False)
-
 
 #create a dashboard using Dash
 # app = dash.Dash(__name__)
